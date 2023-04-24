@@ -62,10 +62,7 @@
                 }
             }
         ?>
-
-        
-
-
+            <!-- recoge el dato que mandan desde el php index -->
             <?php if (!empty($consultaM)) { ?>
 
                 <div class="table-wrapper">
@@ -73,34 +70,35 @@
                     <div class="users-table">
 
                         <table class="table-bordered">
-                            
-                            <thead>
-                                <tr><div class="table-wrapper">
-                <?php if (empty($consultaM)) { ?>
-                    <form action="buscador.php" method="post" name="ModArticulo" class="search-form">
-                        <div class="form-group">
-                            <label for="placa" class="sr-only"></label>
-                            <input class='form-control' name='fechavisitaM' type='date'>
-                        </div>
-                        <br>
-                        <div class="form-group">
-                            <input type="submit" name="boton" value="Consultar" class="btn btn-primary">
-                        </div>
-                    </form>
 
-                <?php } ?>
-                                    <th>ip</th>
-                                    <th>nombres</th>
-                                    <th>documento</th>
-                                    <th>sucursal</th>
-                                    <th>supervisor</th>
-                                    <th>venta bruta</th>
-                                    <th>base efectivo</th>
-                                    <th>total ingreso</th>
-                                    <th>fechavisita</th>
-                                    <th>hora visita</th>
-                                    <th></th>
-                                    
+                            <thead>
+                                <tr>
+                                    <div class="table-wrapper">
+                                        <?php if (empty($consultaM)) { ?>
+                                            <form action="buscador.php" method="post" name="ModArticulo" class="search-form">
+                                                <div class="form-group">
+                                                    <label for="placa" class="sr-only"></label>
+                                                    <input class='form-control' name='fechavisitaM' type='date'>
+                                                </div>
+                                                <br>
+                                                <div class="form-group">
+                                                    <input type="submit" name="boton" value="Consultar" class="btn btn-primary">
+                                                </div>
+                                            </form>
+
+                                        <?php } ?>
+                                        <th>ip</th>
+                                        <th>nombres</th>
+                                        <th>documento</th>
+                                        <th>sucursal</th>
+                                        <th>supervisor</th>
+                                        <th>venta bruta</th>
+                                        <th>base efectivo</th>
+                                        <th>total ingreso</th>
+                                        <th>fechavisita</th>
+                                        <th>hora visita</th>
+                                        <th></th>
+
                                 </tr>
                             </thead>
                             <tbody>
@@ -138,19 +136,19 @@
                                             <?= $consultaM['horavisita'] ?>
                                         </th>
                                         <th>
-                                        <?php echo "<a href='verArqueo.php?documento=" . $consultaM['documento'] . "' ><svg style='color:blue'  xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-search' viewBox='0 0 16 16'>
+                                            <?php echo "<a href='verArqueo.php?documento=" . $consultaM['documento'] . "' ><svg style='color:blue'  xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-search' viewBox='0 0 16 16'>
 				                        <path d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/>
 				                        </svg></a>"; ?>
-                                    </th>
+                                        </th>
                                 </tr>
-                                
+
                             <?php endwhile; ?>
                             </tbody>
-                            
+
                         </table>
-                        
+
                     </div>
-                    
+
 
                 </div>
 
