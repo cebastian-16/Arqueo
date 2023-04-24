@@ -1,4 +1,5 @@
 <?php
+//contenedor para aguardar el contenido del php
 ob_start();
 ?>
 
@@ -247,7 +248,6 @@ ob_start();
                             <label>Total Premios Pagados: </label>
                             <?php echo $row["total_premios_pagados"] ?>
                         </div><br>
-
                         <div class="form-group col-md-3">
                             <label>Entrega Colocador: </label>
                             <?php echo $row["entrega_colocador"] ?>
@@ -273,7 +273,6 @@ ob_start();
                             <?php echo $row["diferencia"] ?>
                         </div>
                         <br>
-
                         <div class="form-group col-md-3">
                             <label>Requisito 1: </label>
                             <?php echo $row["requisito1"] ?>
@@ -557,7 +556,7 @@ ob_start();
 </html>
 
 <?php
-
+//codigo para el pdf
 $html = ob_get_clean();
 
 require_once '../Libreria/dompdf/autoload.inc.php';
