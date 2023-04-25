@@ -35,34 +35,34 @@ if ($_SESSION['sedeLogin'] == "Multired Y Servired") { //Cargar seleccion de emp
     </head>
 
     <body style="background: linear-gradient(90deg, #3e4751 0%, #25303c 100%);">
-    <div class="container-fluid">
-        <div class="row" style="margin-top: 10%;">
-            <div class="col-md-3"></div>
-            <div class="col-md-3">
-                <div class="panel panel-default">
-                    <div class="panel-body center">
-                        <img src="./img/multired.png" class="img img-responsive">
-                        GRUPO EMPRESARIAL MULTIRED
-                        <a href="empresa.php?empresa=Multired">
-                            <button type="button" class="btn btn-primary">Ingresar</button>
-                        </a>
+        <div class="container-fluid">
+            <div class="row" style="margin-top: 10%;">
+                <div class="col-md-3"></div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+                        <div class="panel-body center">
+                            <img src="./img/multired.png" class="img img-responsive">
+                            GRUPO EMPRESARIAL MULTIRED
+                            <a href="empresa.php?empresa=Multired">
+                                <button type="button" class="btn btn-primary">Ingresar</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-3">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <img src="./img/servired.png" class="img img-responsive">
-                        GRUPO EMPRESARIAL SERVIRED
-                        <a href="empresa.php?empresa=Servired">
-                            <button type="button" class="btn btn-warning">Ingresar</button>
-                        </a>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <img src="./img/servired.png" class="img img-responsive">
+                            GRUPO EMPRESARIAL SERVIRED
+                            <a href="empresa.php?empresa=Servired">
+                                <button type="button" class="btn btn-warning">Ingresar</button>
+                            </a>
+                        </div>
                     </div>
                 </div>
+                <div class="col-md-3"></div>
             </div>
-            <div class="col-md-3"></div>
         </div>
-    </div>
     </body>
 
     </html>

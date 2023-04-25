@@ -1,4 +1,4 @@
-<nav class="navbar navbar-light" >
+<nav class="navbar navbar-light">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="index.php">
@@ -17,13 +17,13 @@
 
         <?php if ($_SESSION['rolLogin'] == 'SuperAdministrador') { ?>
 
-        <?php
+      <?php
         }
       } ?>
     </ul>
     <div class="navbar-header navbar-right">
       <div class="navbar-brand session">
-         <?php echo $_SESSION['userLogin'] ?> 
+        <?php echo $_SESSION['userLogin'] ?>
         <a href="cerrars.php">
           <span class="hola">CERAR</span>
         </a>

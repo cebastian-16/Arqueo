@@ -42,7 +42,7 @@ ob_start();
                 }
             }
 
-            ?>
+        ?>
 
             <div class="table-wrapper">
                 <div class="table-title">
@@ -57,16 +57,16 @@ ob_start();
 
 
                 <div class="row">
-                <div class="form-group col-md-3">
-                            <label>Supervisor: </label>
-                            <?php echo $row['supervisor'] ?>
-                        </div>
-                        <br>
-                        <div class="form-group col-md-3">
-                            <label>Dombre Del Supervisor: </label>
-                            <?php echo $row['nombre_supervisor'] ?>
-                        </div>
-                        <br>
+                    <div class="form-group col-md-3">
+                        <label>Supervisor: </label>
+                        <?php echo $row['supervisor'] ?>
+                    </div>
+                    <br>
+                    <div class="form-group col-md-3">
+                        <label>Dombre Del Supervisor: </label>
+                        <?php echo $row['nombre_supervisor'] ?>
+                    </div>
+                    <br>
                     <div class="form-group col-md-3">
                         <label>Documento:</label>
                         <?php echo "<input class='form-control' style='display:none;' value='" . $row["documento"] . "' name='documento' type='text'>" ?>
@@ -541,20 +541,20 @@ ob_start();
 
                     </form>
                 </div>
-                <?php
+            <?php
         }
 
-        ?>
+            ?>
 
 
-        </div>
-        <script type="text/javascript" src='js/jquery.min.js'></script>
-        <script type="text/javascript" src='js/bootstrap.min.js'></script>
-        <script type="text/javascript">
-            function hola() {
-                $("#id").val("hola");
-            }
-        </script>
+            </div>
+            <script type="text/javascript" src='js/jquery.min.js'></script>
+            <script type="text/javascript" src='js/bootstrap.min.js'></script>
+            <script type="text/javascript">
+                function hola() {
+                    $("#id").val("hola");
+                }
+            </script>
 </body>
 
 </html>
@@ -580,4 +580,4 @@ $dompdf->setPaper('latter');
 $dompdf->render();
 $dompdf->stream("Arqueo.pdf", array("Attachment" => true))
 
-    ?>
+?>

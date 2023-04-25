@@ -10,7 +10,6 @@ class datos
 		$this->conn = $conectar->conexion();
 	}
 
-
 	public function mirarDatos()
 
 	{
@@ -90,22 +89,22 @@ class datos
 	}
 
 
-	// public function consultar($ip, $nombres, $documento, $sucursal, $supervisor, $ventabruta)
-	// {
-	// 	$sql = "SELECT `ip` , `nombres`, `documento`, `sucursal`, `supervisor`, `ventabruta`, baseefectivo, totalingreso, fechavisita,	horavisita ";
+	public function consultar($ip, $nombres, $documento, $sucursal, $supervisor, $ventabruta)
+	{
+		$sql = "SELECT `ip` , `nombres`, `documento`, `sucursal`, `supervisor`, `ventabruta`, baseefectivo, totalingreso, fechavisita,	horavisita ";
 
-	// 	$resultado = mysqli_query($this->conn, $sql);
-	// 	if ($resultado == TRUE) {
+		$resultado = mysqli_query($this->conn, $sql);
+		if ($resultado == TRUE) {
 
-	// 		echo "<div class='alert alert-success alert-dismissible'>";
-	// 		echo "  <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>";
-	// 		echo "  <strong>Excelente!</strong> Se encontro.";
-	// 		echo "</div>";
-	// 	} else {
-	// 		echo "<div class='alert alert-danger alert-dismissible'>";
-	// 		echo "  <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>";
-	// 		echo "  <strong>Error!</strong> " . mysqli_error($this->conn) . $sql;
-	// 		echo "</div>";
-	// 	}
-	// }
+			echo "<div class='alert alert-success alert-dismissible'>";
+			echo "  <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>";
+			echo "  <strong>Excelente!</strong> Se encontro.";
+			echo "</div>";
+		} else {
+			echo "<div class='alert alert-danger alert-dismissible'>";
+			echo "  <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>";
+			echo "  <strong>Error!</strong> " . mysqli_error($this->conn) . $sql;
+			echo "</div>";
+		}
+	}
 }

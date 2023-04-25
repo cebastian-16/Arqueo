@@ -31,7 +31,6 @@
             $datos = new datos;
 
 
-
             if (!empty($_GET['documento'])) {
                 $documento = $_GET['documento'];
                 $resultadoDato = $datos->Datos($documento);
