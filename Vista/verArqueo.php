@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>caracteristicas</title>
+    <title>Ver Arqueo</title>
     <link rel='stylesheet prefetch' href='css/bootstrap.min.css'>
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
     <script type="text/javascript" src="js/scripRegArt.js"></script>
