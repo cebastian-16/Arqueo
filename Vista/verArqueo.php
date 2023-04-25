@@ -174,7 +174,7 @@
                         </div>
                         <div class="col-sm-8">
                             <a href="generar.php?documento=<?= $row['documento'] ?>">
-                                <button type="button" class="btn btn-success" style="margin-top: 0px !important;"> Generar PDF</button>
+                                <button type="button" class="btn btn-success" style="margin-top: 0px !important;"> Generar PDF </button>
                             </a>
                         </div>
 
