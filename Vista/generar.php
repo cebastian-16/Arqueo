@@ -57,9 +57,18 @@ ob_start();
 
 
                 <div class="row">
-
+                <div class="form-group col-md-3">
+                            <label>Supervisor: </label>
+                            <?php echo $row['supervisor'] ?>
+                        </div>
+                        <br>
+                        <div class="form-group col-md-3">
+                            <label>Dombre Del Supervisor: </label>
+                            <?php echo $row['nombre_supervisor'] ?>
+                        </div>
+                        <br>
                     <div class="form-group col-md-3">
-                        <label>documento:</label>
+                        <label>Documento:</label>
                         <?php echo "<input class='form-control' style='display:none;' value='" . $row["documento"] . "' name='documento' type='text'>" ?>
                         <?php echo $row["documento"] ?>
                     </div>
@@ -78,11 +87,6 @@ ob_start();
                         <div class="form-group col-md-3">
                             <label>Sucursal: </label>
                             <?php echo $row['sucursal'] ?>
-                        </div>
-                        <br>
-                        <div class="form-group col-md-3">
-                            <label>Supervisor: </label>
-                            <?php echo $row['supervisor'] ?>
                         </div>
                         <br>
                         <div class="form-group col-md-3">

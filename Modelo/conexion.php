@@ -3,7 +3,7 @@
 class conectar
 {
 	public $servername = 'localhost';
-	public $database = "";
+	public $database = "appseguimiento";
 	public $username = "root";
 	public $password = "123456";
 	private $bd = "";

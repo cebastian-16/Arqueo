@@ -1,6 +1,6 @@
-<?PHP 
+<?PHP
 session_start();
-if($_SESSION['cargoLogin'] != 'Auditoria' && $_SESSION['cargoLogin'] != 'Auxiliar Auditoria' && $_SESSION['rolLogin'] != 'SuperAdministrador' && $_SESSION['procesoLogin'] != 'TIC'){
+if ($_SESSION['cargoLogin'] != 'Auditoria' && $_SESSION['cargoLogin'] != 'Auxiliar Auditoria' && $_SESSION['rolLogin'] != 'SuperAdministrador' && $_SESSION['procesoLogin'] != 'TIC') {
     session_destroy();
     header('Location: ../../errores/403/index.html');
     exit;
@@ -23,16 +23,18 @@ if ($_SESSION['sedeLogin'] == "Servired" || $_GET["empresa"] == "Servired") {
 if ($_SESSION['sedeLogin'] == "Multired Y Servired") { //Cargar seleccion de empresa
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <title>Empresa</title>
-</head>
-<body style="background: linear-gradient(90deg, #3e4751 0%, #25303c 100%);">
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <title>Empresa</title>
+    </head>
+
+    <body style="background: linear-gradient(90deg, #3e4751 0%, #25303c 100%);">
     <div class="container-fluid">
         <div class="row" style="margin-top: 10%;">
             <div class="col-md-3"></div>
@@ -61,6 +63,7 @@ if ($_SESSION['sedeLogin'] == "Multired Y Servired") { //Cargar seleccion de emp
             <div class="col-md-3"></div>
         </div>
     </div>
-</body>
-</html>
+    </body>
+
+    </html>
 <?php } ?>

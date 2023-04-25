@@ -87,15 +87,16 @@
                                             </form>
 
                                         <?php } ?>
+                                        <th>supervisor</th>
+                                        <th>nombre completo</th>
                                         <th>ip</th>
                                         <th>nombres</th>
                                         <th>documento</th>
                                         <th>sucursal</th>
-                                        <th>supervisor</th>
                                         <th>venta bruta</th>
                                         <th>base efectivo</th>
                                         <th>total ingreso</th>
-                                        <th>fechavisita</th>
+                                        <th>fecha visita</th>
                                         <th>hora visita</th>
                                         <th></th>
 
@@ -105,6 +106,12 @@
                                 <tr>
                                     <?php while ($consultaM = mysqli_fetch_array($resultadoArqueo)) : ?>
 
+                                        <th>
+                                            <?= $consultaM['supervisor'] ?>
+                                        </th>
+                                        <th>
+                                            <?= $consultaM['nombre_supervisor'] ?>
+                                        </th>
                                         <th>
                                             <?= $consultaM['ip'] ?>
                                         </th>
@@ -116,9 +123,6 @@
                                         </th>
                                         <th>
                                             <?= $consultaM['sucursal'] ?>
-                                        </th>
-                                        <th>
-                                            <?= $consultaM['supervisor'] ?>
                                         </th>
                                         <th>
                                             <?= $consultaM['ventabruta'] ?>

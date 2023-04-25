@@ -64,22 +64,22 @@
                             <input type="submit" name="boton" value="Consultar" class="btn btn-primary">
                         </div>
                     </form>
-
                 <?php } ?>
                 <div class="users-table">
 
                     <table class="table-bordered">
                         <thead>
                             <tr>
+                                <th>supervisor</th>
+                                <th>nombre completo</th>
                                 <th>ip</th>
                                 <th>nombres</th>
                                 <th>documento</th>
                                 <th>sucursal</th>
-                                <th>supervisor</th>
                                 <th>venta bruta</th>
                                 <th>base efectivo</th>
                                 <th>total ingreso</th>
-                                <th>fechavisita</th>
+                                <th>fecha visita</th>
                                 <th>hora visita</th>
                                 <th></th>
                             </tr>
@@ -87,6 +87,12 @@
                         <tbody>
                             <tr>
                                 <?php while ($row = mysqli_fetch_array($resultadoDatos)) : ?>
+                                    <th>
+                                        <?= $row['supervisor'] ?>
+                                    </th>
+                                    <th>
+                                        <?= $row['nombre_supervisor'] ?>
+                                    </th>
                                     <th>
                                         <?= $row['ip'] ?>
                                     </th>
@@ -98,9 +104,6 @@
                                     </th>
                                     <th>
                                         <?= $row['sucursal'] ?>
-                                    </th>
-                                    <th>
-                                        <?= $row['supervisor'] ?>
                                     </th>
                                     <th>
                                         <?= $row['ventabruta'] ?>
