@@ -17,7 +17,7 @@ class datos
 
 		if ($_SESSION['sedeStock'] == "Multired") {
 
-			$mirarDatos = "SELECT s.supervisor, IF(s.supervisor = b.login, b.nombre, 'Mayor de edad') AS nombre_supervisor, s.ip, s.nombres, s.documento, s.sucursal, s.ventabruta, s.baseefectivo, s.totalingreso, s.fechavisita,  s.horavisita
+			$mirarDatos = "SELECT s.supervisor, IF(s.supervisor = b.login, b.nombre, '') AS nombre_supervisor, s.ip, s.nombres, s.documento, s.sucursal, s.ventabruta, s.baseefectivo, s.totalingreso, s.fechavisita,  s.horavisita
 			FROM appseguimientos.registro_arqueo_servired s
 			INNER JOIN bdpersonas.tbusuario b ON s.supervisor = b.login LIMIT 6";
 			$resultadoDatos = mysqli_query($this->conn, $mirarDatos);
@@ -26,7 +26,7 @@ class datos
 
 		if ($_SESSION['sedeStock'] == "Servired") {
 
-			$mirarDatos = "SELECT s.supervisor, IF(s.supervisor = b.login, b.nombre, 'Mayor de edad') AS nombre_supervisor, s.ip, s.nombres, s.documento, s.sucursal, s.ventabruta, s.baseefectivo, s.totalingreso, s.fechavisita,  s.horavisita
+			$mirarDatos = "SELECT s.supervisor, IF(s.supervisor = b.login, b.nombre, '') AS nombre_supervisor, s.ip, s.nombres, s.documento, s.sucursal, s.ventabruta, s.baseefectivo, s.totalingreso, s.fechavisita,  s.horavisita
 				FROM appseguimiento.registro_arqueo_servired s
 				INNER JOIN bdpersonas.tbusuario b ON s.supervisor = b.login LIMIT 6";
 			$resultadoDatos = mysqli_query($this->conn, $mirarDatos);
@@ -39,7 +39,7 @@ class datos
 	{
 		if ($_SESSION['sedeStock'] == "Multired") {
 
-			$Datos = "SELECT s.supervisor, IF(s.supervisor = b.login, b.nombre, 'Mayor de edad') AS nombre_supervisor, s.ip, s.nombres, s.documento, s.sucursal,s.ventabruta, s.baseefectivo, s.totalingreso, s.chancesabonados, s.chancespreimpresos,s.premiospagados,s.efectivocajafuerte, s.totalegresos, s.totalbilletes, s.totalmonedas, s.totalarqueo, s.sobrantefaltante, 
+			$Datos = "SELECT s.supervisor, IF(s.supervisor = b.login, b.nombre, '') AS nombre_supervisor, s.ip, s.nombres, s.documento, s.sucursal,s.ventabruta, s.baseefectivo, s.totalingreso, s.chancesabonados, s.chancespreimpresos,s.premiospagados,s.efectivocajafuerte, s.totalegresos, s.totalbilletes, s.totalmonedas, s.totalarqueo, s.sobrantefaltante, 
 		s.canti_billete_cienmil, s.total_billete_cienmil, s.canti_billete_cincuentamil, s.total_billete_cincuentamil, s.canti_billete_veintemil, s.total_billete_veintemil, s.canti_billete_diezmil, s.total_billete_diezmil, s.canti_billete_cincomil, s.total_billete_cincomil, s.canti_billete_dosmil, s.total_billete_dosmil, s.canti_billete_mil, s.total_billete_mil, 
 		s.canti_moneda_mil, s.total_moneda_mil, s.canti_moneda_quinientos, s.total_moneda_quinientos, s.canti_moneda_docientos, s.total_moneda_docientos, s.canti_moneda_cien, s.total_moneda_cien, s.canti_moneda_cincuenta, s.total_moneda_ciencuenta, 
 		s.total_efectivo, s.total_premios_pagados, s.entrega_colocador, s.sobrantefaltante_caja, s.colocador_cajafuerte, s.rollos_bnet, s.rollos_fisicos, s.diferencia, s.requisito1, s.observacion1, s.requisito2, s.observacion2, s.requisito3, s.observacion3, s.requisito4, s.observacion4, s.requisito5, s.observacion5, s.requisito6, s.observacion6, s.requisito7, 
@@ -53,7 +53,7 @@ class datos
 		}
 		if ($_SESSION['sedeStock'] == "Servired") {
 
-			$Datos = "SELECT s.supervisor, IF(s.supervisor = b.login, b.nombre, 'Mayor de edad') AS nombre_supervisor, s.ip, s.nombres, s.documento, s.sucursal,s.ventabruta, s.baseefectivo, s.totalingreso, s.chancesabonados, s.chancespreimpresos,s.premiospagados,s.efectivocajafuerte, s.totalegresos, s.totalbilletes, s.totalmonedas, s.totalarqueo, s.sobrantefaltante, 
+			$Datos = "SELECT s.supervisor, IF(s.supervisor = b.login, b.nombre, '') AS nombre_supervisor, s.ip, s.nombres, s.documento, s.sucursal,s.ventabruta, s.baseefectivo, s.totalingreso, s.chancesabonados, s.chancespreimpresos,s.premiospagados,s.efectivocajafuerte, s.totalegresos, s.totalbilletes, s.totalmonedas, s.totalarqueo, s.sobrantefaltante, 
 		s.canti_billete_cienmil, s.total_billete_cienmil, s.canti_billete_cincuentamil, s.total_billete_cincuentamil, s.canti_billete_veintemil, s.total_billete_veintemil, s.canti_billete_diezmil, s.total_billete_diezmil, s.canti_billete_cincomil, s.total_billete_cincomil, s.canti_billete_dosmil, s.total_billete_dosmil, s.canti_billete_mil, s.total_billete_mil, 
 		s.canti_moneda_mil, s.total_moneda_mil, s.canti_moneda_quinientos, s.total_moneda_quinientos, s.canti_moneda_docientos, s.total_moneda_docientos, s.canti_moneda_cien, s.total_moneda_cien, s.canti_moneda_cincuenta, s.total_moneda_ciencuenta, 
 		s.total_efectivo, s.total_premios_pagados, s.entrega_colocador, s.sobrantefaltante_caja, s.colocador_cajafuerte, s.rollos_bnet, s.rollos_fisicos, s.diferencia, s.requisito1, s.observacion1, s.requisito2, s.observacion2, s.requisito3, s.observacion3, s.requisito4, s.observacion4, s.requisito5, s.observacion5, s.requisito6, s.observacion6, s.requisito7, 
@@ -72,7 +72,7 @@ class datos
 	{
 		if ($_SESSION['sedeStock'] == "Multired") {
 
-			$consultarArqueo = "SELECT s.supervisor, IF(s.supervisor = b.login, b.nombre, 'Mayor de edad') AS nombre_supervisor, s.ip, s.nombres, s.documento, s.sucursal, s.ventabruta, s.baseefectivo, s.totalingreso, s.fechavisita,  s.horavisita
+			$consultarArqueo = "SELECT s.supervisor, IF(s.supervisor = b.login, b.nombre, '') AS nombre_supervisor, s.ip, s.nombres, s.documento, s.sucursal, s.ventabruta, s.baseefectivo, s.totalingreso, s.fechavisita,  s.horavisita
 			FROM appseguimientos.registro_arqueo_servired s
 			INNER JOIN bdpersonas.tbusuario b ON s.supervisor = b.login WHERE s.fechavisita = '" . $fechavisitaM . "'";
 			$resultadoArqueo = mysqli_query($this->conn, $consultarArqueo);
@@ -81,7 +81,7 @@ class datos
 
 		if ($_SESSION['sedeStock'] == "Servired") {
 
-			$consultarArqueo = "SELECT s.supervisor, IF(s.supervisor = b.login, b.nombre, 'Mayor de edad') AS nombre_supervisor, s.ip, s.nombres, s.documento, s.sucursal, s.ventabruta, s.baseefectivo, s.totalingreso, s.fechavisita,  s.horavisita
+			$consultarArqueo = "SELECT s.supervisor, IF(s.supervisor = b.login, b.nombre, '') AS nombre_supervisor, s.ip, s.nombres, s.documento, s.sucursal, s.ventabruta, s.baseefectivo, s.totalingreso, s.fechavisita,  s.horavisita
 			FROM appseguimiento.registro_arqueo_servired s
 			INNER JOIN bdpersonas.tbusuario b ON s.supervisor = b.login WHERE s.fechavisita = '" . $fechavisitaM . "'";
 			$resultadoArqueo = mysqli_query($this->conn, $consultarArqueo);
