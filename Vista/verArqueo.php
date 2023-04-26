@@ -7,6 +7,7 @@
     <link rel='stylesheet prefetch' href='css/bootstrap.min.css'>
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
     <script type="text/javascript" src="js/scripRegArt.js"></script>
+    <link rel="icon" href="http://localhost/Arqueos/Vista/img/arqueo.ico" type="image/x-icon">
 </head>
 
 <body>
