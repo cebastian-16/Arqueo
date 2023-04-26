@@ -38,18 +38,18 @@
             $row = mysqli_fetch_array($resultadoDatos);
 
 
-            if (!empty($_POST['boton'])) {
-                $accion = $_POST['boton'];
-                if ($accion == "Modificar") {
-                    $ip = $_POST['ip'];
-                    $nombres = $_POST['nombres'];
-                    $documento = $_POST['documento '];
-                    $sucursal = $_POST['sucursal '];
-                    $supervisor = $_POST['supervisor'];
-                    $ventabruta = $_POST['ventabruta'];
-                    $modificarDatos = $datos->mirarDatos($ip, $nombres, $documento, $sucursal, $supervisor, $ventabruta, $_SESSION['userLogin']);
-                }
-            }
+            // if (!empty($_POST['boton'])) {
+            //     $accion = $_POST['boton'];
+            //     if ($accion == "Modificar") {
+            //         $ip = $_POST['ip'];
+            //         $nombres = $_POST['nombres'];
+            //         $documento = $_POST['documento '];
+            //         $sucursal = $_POST['sucursal '];
+            //         $supervisor = $_POST['supervisor'];
+            //         $ventabruta = $_POST['ventabruta'];
+            //         $modificarDatos = $datos->mirarDatos($ip, $nombres, $documento, $sucursal, $supervisor, $ventabruta, $_SESSION['userLogin']);
+            //     }
+            // }
         ?>
 
             <div class="table-wrapper">
