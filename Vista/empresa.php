@@ -10,15 +10,16 @@ if (!isset($_SESSION['userLogin'])) {
     header('Location: ../../login-gane/view/login.php');
 }
 
-if ($_SESSION['sedeLogin'] == "Multired" || $_GET["empresa"] == "Multired") {
+if ($_SESSION['sedeLogin'] == "Multired" || (isset($_GET["empresa"]) && $_GET["empresa"] == "Multired")) {
     $_SESSION['sedeStock'] = "Multired";
     header('Location: index.php');
 }
 
-if ($_SESSION['sedeLogin'] == "Servired" || $_GET["empresa"] == "Servired") {
+if ($_SESSION['sedeLogin'] == "Servired" || (isset($_GET["empresa"]) && $_GET["empresa"] == "Servired")) {
     $_SESSION['sedeStock'] = "Servired";
     header('Location: index.php');
 }
+
 
 if ($_SESSION['sedeLogin'] == "Multired Y Servired") { //Cargar seleccion de empresa
 ?>

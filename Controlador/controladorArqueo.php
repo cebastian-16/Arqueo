@@ -16,7 +16,7 @@ class datos
 		if ($_SESSION['sedeStock'] == "Multired") {
 
 			$mirarDatos = "SELECT s.supervisor, IF(s.supervisor = b.login, b.nombre, '') AS nombre_supervisor, s.*
-			FROM appseguimiento.registro_arqueo_servired s
+			FROM appseguimientos.registro_arqueo_servired s
 			INNER JOIN bdpersonas.tbusuario b ON s.supervisor = b.login LIMIT 6";
 			$resultadoDatos = mysqli_query($this->conn, $mirarDatos);
 			return $resultadoDatos;
