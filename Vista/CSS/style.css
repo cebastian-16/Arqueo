@@ -179,6 +179,7 @@
 		   border: 1px solid #111010;
 			font-size: 19px;
 			font-family: Arial, Helvetica, sans-serif;
+			
 	   } 
    
    
@@ -193,7 +194,6 @@
 			padding: 16px;
 			text-align: center;
 			font-size: .85em;
-			border: 3px solid #0f0f0f;
 			color: rgba(0, 0, 0, 0.733);
 			
 		}

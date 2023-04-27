@@ -70,7 +70,7 @@
                         <thead>
                             <tr>
                                 <th >supervisor</th>
-                                <th>nombre completo</th>
+                                <th >nombre completo</th>
                                 <th>ip</th>
                                 <th>nombres</th>
                                 <th>documento</th>
@@ -78,7 +78,7 @@
                                 <th>venta bruta</th>
                                 <th>base efectivo</th>
                                 <th>total ingreso</th>
-                                <th>fecha visita</th>
+                                <th >fecha visita</th>
                                 <th>hora visita</th>
                                 <th></th>
                             </tr>
@@ -121,7 +121,7 @@
                                     </th>
                                     <th>
                                         <!-- manda la variable al buscar php -->
-                                        <?php echo "<a href='verArqueo.php?documento=" . $row['documento'] . "' ><svg style='color:blue'  xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-search' viewBox='0 0 16 16'>
+                                        <?php echo "<a href='verArqueo.php?documento=" . $row['documento'] . "' ><svg style='color:blue'  xmlns='http://www.w3.org/2000/svg' width='30' height='20' fill='currentColor' class='bi bi-search' viewBox='0 0 16 16'>
 				                        <path d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/>
 				                        </svg></a>"; ?>
                                     </th>
