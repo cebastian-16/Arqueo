@@ -169,7 +169,7 @@
                 <div class="table-title">
                     <div class="row">
                         <div class="col-sm-4">
-                            <h2>Arqueo</b></h2>
+                            <h2>ARQUEO</b></h2>
                         </div>
                         <div class="col-sm-8">
                             <a href="generar.php?documento=<?= $row['documento'] ?>">
