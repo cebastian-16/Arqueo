@@ -17,8 +17,12 @@
 
 		}
 		.table-wrapper .btn.btn-primary:hover {
-			transform: translateY(-2px);
+			transform: translateY(-1px);
 			color: #000;
+			transform: scale(1.1);
+			opacity: 0.5;
+			transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+			cursor: pointer;
 			
 		  }
 		
@@ -235,7 +239,6 @@
 			padding: 0.5rem;
 			margin-right: 0.5rem;
 			border-radius:  5%;
-			border: 1px solid #ccc;
 			width: 110%;
 			max-width: 300px;
 			margin-top: 25px;
@@ -255,8 +258,23 @@
 		}
 
 		.BOTON:hover {
-			transform: translateY(-2px);
+			transform: translateY(-1px);
 			color: #000;
+			transform: scale(1.1);
+			opacity: 0.5;
+			transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+			cursor: pointer;
+			animation-duration: 3s;
+			animation-name: slidein;
+			
+		  }
+		  .bi-search:hover{
+			transform: translateY(-1px);
+			color: #000;
+			transform: scale(2.1);
+			opacity: 0.5;
+			transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+			cursor: pointer;
 			
 		  }
 
