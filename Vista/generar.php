@@ -579,6 +579,6 @@ $dompdf->setPaper('latter');
 // $dompdf->setPaper('A4','landscape');
 
 $dompdf->render();
-$dompdf->stream("Arqueo.pdf", array("Attachment" => false))
+$dompdf->stream("Arqueo.pdf", array("Attachment" => true))
 
 ?>
