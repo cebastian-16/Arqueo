@@ -5,7 +5,13 @@
   } else {
     echo "<img style='height: 68px; width: 200px;' src='http://localhost/Arqueos/Vista/img/multired.png'>";
   }
-  echo $_SESSION['userLogin']
   ?>
 
 </a>
+<div>
+  <?php
+  echo $_SESSION['nombresLogin'];
+  echo ": ";
+  echo $_SESSION['userLogin'];
+  ?>
+</div>

@@ -8,6 +8,7 @@ ob_start();
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="http://localhost/Arqueos/Vista/img/arqueo.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -578,6 +579,6 @@ $dompdf->setPaper('latter');
 // $dompdf->setPaper('A4','landscape');
 
 $dompdf->render();
-$dompdf->stream("Arqueo.pdf", array("Attachment" => true))
+$dompdf->stream("Arqueo.pdf", array("Attachment" => false))
 
 ?>
