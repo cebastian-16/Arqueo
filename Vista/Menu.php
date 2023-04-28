@@ -13,7 +13,7 @@
       </a>
     </div>
     <ul class="nav navbar-nav">
-      <?php if ($_SESSION['cargoLogin'] == 'Auditoria' || $_SESSION['cargoLogin'] == 'Auditoria'  || $_SESSION['rolLogin'] == 'SuperAdministrador') { ?>
+      <?php if ($_SESSION['cargoLogin'] == 'Auditoria' || $_SESSION['cargoLogin'] == 'Auditoria'  || $_SESSION['rolLogin'] == 'Administrador') { ?>
 
         <?php if ($_SESSION['rolLogin'] == 'SuperAdministrador') { ?>
 

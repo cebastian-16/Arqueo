@@ -23,7 +23,7 @@
             exit;
         } {
 
-            if ($_SESSION['cargoLogin'] != 'Auditoria' && $_SESSION['rolLogin'] != 'SuperAdministrador') {
+            if ($_SESSION['cargoLogin'] != 'Auditoria' && $_SESSION['rolLogin'] != 'Administrador') {
                 session_destroy();
                 header('Location: ../../errores/403/index.html');
                 exit;
@@ -69,17 +69,17 @@
                     <table class="table-bordered">
                         <thead>
                             <tr>
-                                <th >supervisor</th>
-                                <th >nombre completo</th>
-                                <th>ip</th>
-                                <th>nombres</th>
-                                <th>documento</th>
-                                <th>sucursal</th>
-                                <th>venta bruta</th>
-                                <th>base efectivo</th>
-                                <th>total ingreso</th>
-                                <th >fecha visita</th>
-                                <th>hora visita</th>
+                                <th>Supervisor</th>
+                                <th>Nombre Completo</th>
+                                <th>IP</th>
+                                <th>Nombres</th>
+                                <th>Documento</th>
+                                <th>Sucursal</th>
+                                <th>Venta Bruta</th>
+                                <th>Base Efectivo</th>
+                                <th>Total Ingreso</th>
+                                <th>Fecha Visita</th>
+                                <th>Hora Visita</th>
                                 <th></th>
                             </tr>
                         </thead>

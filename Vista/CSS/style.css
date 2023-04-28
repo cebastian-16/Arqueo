@@ -10,11 +10,17 @@
 			color: #fff;
 			background: #03A9F4;
 			margin-top: 25px;
-			margin-left: 14px;
-			font-size: 14px;
+			margin-left: 16px;
+			font-size: 13.5px;
 			padding: 10px 10px;
+			border-radius: 5%;
 
 		}
+		.table-wrapper .btn.btn-primary:hover {
+			transform: translateY(-2px);
+			color: #000;
+			
+		  }
 		
 		.filter-group select.form-control {
 			width: 110px;
@@ -118,7 +124,7 @@
 	
 		.session > a{
 			color: rgb(255, 0, 0) !important;
-			margin-left: 10% !important;
+			margin-left: 19% !important;
 			display: flex;
 		}
 	
@@ -180,12 +186,14 @@
 			font-size: 19px;
 			font-family: Arial, Helvetica, sans-serif;
 			
+			
 	   } 
    
 		table tr {
 			background-color: #f8f8f8;
 			border: 1px solid #000000;
 			padding: 4px;
+			
 		
 		}
    
@@ -226,7 +234,7 @@
 		.search-form input {
 			padding: 0.5rem;
 			margin-right: 0.5rem;
-			border-radius: 0.25rem;
+			border-radius:  5%;
 			border: 1px solid #ccc;
 			width: 110%;
 			max-width: 300px;
@@ -234,200 +242,28 @@
 			padding: 20px 10px;
 			
 		}
+
+		.BOTON{
+			color: #fff;
+			background: #03A9F4;
+			margin-left: 93.5% !important;
+			font-size: 14px;
+			padding: 10px 22px;
+			border-radius: 5%;
+			border-color: #03A9F4;
+
+		}
+
+		.BOTON:hover {
+			transform: translateY(-2px);
+			color: #000;
+			
+		  }
+
+		
+
+		
 	
 	
 	
-	/* ----------------Estilo Para reportes--------------------------
- 	body {
- 	    color: #566787;
- 	    background: #f5f5f5;
- 	    font-family: 'Varela Round', sans-serif;
- 	    font-size: 13px;
- 	}
-
- 	.table-wrapper .btn.btn-primary {
- 	    color: #fff;
- 	    background: #03A9F4;
- 	    margin-top: 25px;
- 	    margin-left: 14px;
- 	    font-size: 14px;
- 	    padding: 10px 10px;
- 	   
- 	}
-
-
- 	----------------Estilo Para MENU--------------------------
- 	
-	  div > a > button{
-    	margin-top: 23px;
-		
-    }
-
-    nav{
-    	background-color: #001085;
-		
-    }
-
-	.hola{
-		
-		display: flex;
-    align-items: center;
-    margin-left: 15px; /* Cambie este valor según su preferencia 
-		
-	}
-    
-    .navbar-header > a {
-		margin-left: -120% !important;
-    	color: yellow;
-    	padding: 0px 15px;
-		
-    }
-
-    .dropdown > a, .active > a {
-    	color: white;
-		
-    }
-
-    .dropdown > a:hover, .active > a:hover {
-    	color: #142b6f;
-		
-    }
-
-    .dropdown > a:focus, .active > a:focus {
-    	color: #142b6f;
-		
-    }
-
-    .session{
-    	/* margin-left: 100% !important; 
-    	color: white !important;
-    	padding: 5px 20px !important;
-		margin-left: 210% !important;
-		
-		
-    }
-
-    .session > a{
-    	color: red !important;
-    	margin-left: 0% !important;
-		padding: 20px 0px !important;
 	
-		
-    }
-
- 	.users-form form {
- 	    display: flex;
- 	    flex-direction: column;
- 	    gap: 24px;
- 	    width: 30%;
- 	    margin: 20px auto;
- 	    text-align: center;
-
- 	}
-
- 	.users-form form input {
- 	    font-family: 'Segoe UI', sans-serif;
- 	}
-
- 	.users-form form input[type=text],
- 	.users-form form input[type=password],
- 	.users-form form input[type=email] {
- 	    padding: 8px;
- 	    border: 2px solid #aaa;
- 	    border-radius: 4px;
- 	    outline: none;
- 	    transition: .3s;
- 	}
-
- 	.users-form form input[type=text]:focus,
- 	.users-form form input[type=password]:focus,
- 	.users-form form input[type=password]:focus {
- 	    border-color: dodgerBlue;
- 	    box-shadow: 0 0 6px 0 dodgerBlue;
- 	}
-
- 	.users-form form input[type=submit] {
- 	    border: none;
- 	    padding: 12px 50px;
- 	    text-decoration: none;
- 	    transition-duration: 0.4s;
- 	    cursor: pointer;
- 	    border-radius: 5px;
- 	    background-color: white;
- 	    color: black;
- 	    border: 2px solid #60a100;
- 	}
-
- 	.users-form form input[type=submit]:hover {
- 	    background-color: #60a100;
- 	    color: white;
- 	}
-
- 	.users-table table{
-        padding: 50px;
-        border: 1px solid #111010;
- 	    font-size: 20px;
-    } 
-
-
- 	table tr {
- 	    background-color: #f8f8f8;
- 	    border: 3px solid #111010;
- 	    padding: 4px;
- 	}
-
- 	table th {
- 	    padding: 16px;
- 	    text-align: center;
- 	    font-size: .85em;
- 	    border: 3px solid #0f0f0f;
- 	}
-
- 	.users-table--edit {
- 	    background: #009688;
- 	    padding: 6px;
- 	    color: #fff;
- 	    text-align: center;
- 	    font-weight: bold;
- 	}
-
- 	.users-table--delete {
- 	    background: #b11e1e;
- 	    padding: 6px;
- 	    color: #fff;
- 	    text-align: center;
- 	    font-weight: bold;
- 	}
-
- 	.search-form {
- 	    display: flex;
- 	    align-items: center;
- 	}
-
- 	.search-form input {
- 	    font-size: 14px;
-		
- 	}
-
- 	.search-form input {
- 	    padding: 0.5rem;
- 	    margin-right: 0.5rem;
- 	    border-radius: 0.25rem;
- 	    border: 1px solid #ccc;
- 	    width: 110%;
- 	    max-width: 300px;
-		 margin-top: 25px;
-		 padding: 20px 10px;
-		 
- 	}
-
-	 .navbar-icon {
-		display: flex;
-		align-items: center;
-		margin-left: 10px; /* Cambie este valor según su preferencia 
-	  }
-	  
-	  .navbar-icon svg {
-		width: 20px;  Cambie este valor según su preferencia 
-		height: 20px;  Cambie este valor según su preferencia 
-	  } */

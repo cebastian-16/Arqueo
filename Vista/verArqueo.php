@@ -16,7 +16,7 @@
         <?php
         session_start();
 
-        if ($_SESSION['cargoLogin'] != 'Auditoria' && $_SESSION['rolLogin'] != 'SuperAdministrador') {
+        if ($_SESSION['cargoLogin'] != 'Auditoria' && $_SESSION['rolLogin'] != 'Administrador') {
             session_destroy();
             header('Location: ../../errores/403/index.html');
             exit;

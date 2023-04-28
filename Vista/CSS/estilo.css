@@ -21,6 +21,11 @@
 		outline: none !important;
 		margin-left: 10px;
 	}
+	.table-wrapper .btn.btn-primary:hover {
+		transform: translateY(-2px);
+		color: #000;
+		
+	  }
 	.table-wrapper .btn:hover {
         color: #333;
 		background: #f2f2f2;
