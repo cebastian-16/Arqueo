@@ -1,7 +1,7 @@
 <nav class="navbar navbar-light">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="index.php">
+      <a class="navbar-brand" href="index1.php">
         <?php
         if ($_SESSION['sedeStock'] == "Servired") {
           echo "<img style='height: 68px; width: 153px;' src='img/ganeJamundi.png'>";

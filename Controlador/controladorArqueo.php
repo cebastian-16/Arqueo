@@ -29,6 +29,8 @@ class datos
 			INNER JOIN bdpersonas.tbusuario b ON s.supervisor = b.login LIMIT 6";
 			$resultadoDatos = mysqli_query($this->conn, $mirarDatos);
 			return $resultadoDatos;
+
+			
 		}
 	}
 
@@ -106,4 +108,6 @@ class datos
 			echo "</div>";
 		}
 	}
+
+	
 }

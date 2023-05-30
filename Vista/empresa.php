@@ -12,12 +12,12 @@ if (!isset($_SESSION['userLogin'])) {
 
 if ($_SESSION['sedeLogin'] == "Multired" || (isset($_GET["empresa"]) && $_GET["empresa"] == "Multired")) {
     $_SESSION['sedeStock'] = "Multired";
-    header('Location: index.php');
+    header('Location: index1.php');
 }
 
 if ($_SESSION['sedeLogin'] == "Servired" || (isset($_GET["empresa"]) && $_GET["empresa"] == "Servired")) {
     $_SESSION['sedeStock'] = "Servired";
-    header('Location: index.php');
+    header('Location: index1.php');
 }
 
 

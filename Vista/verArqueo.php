@@ -46,123 +46,6 @@
                 }
             }
 
-            // if (!empty($_POST['boton'])) {
-            //     $accion = $_POST['boton'];
-            //     if ($accion == "Modificar") {
-            //         $ip = $_POST['ip'];
-            //         $nombres = $_POST['nombres'];
-            //         $documento = $_POST['documento '];
-            //         $sucursal = $_POST['sucursal '];
-            //         $supervisor = $_POST['supervisor'];
-            //         $ventabruta = $_POST['ventabruta'];
-            //         $baseefectivo = $_POST['baseefectivo'];
-            //         $totalingreso = $_POST['totalingreso'];
-            //         $chancesabonados = $_POST['chancesabonados'];
-            //         $chancespreimpresos = $_POST['chancespreimpresos '];
-            //         $premiospagados = $_POST['premiospagados '];
-            //         $efectivocajafuerte = $_POST['efectivocajafuerte'];
-            //         $totalegresos = $_POST['totalegresos'];
-            //         $totalbilletes = $_POST['totalbilletes'];
-            //         $totalmonedas = $_POST['totalmonedas'];
-            //         $totalarqueo = $_POST['totalarqueo'];
-            //         $sobrantefaltante = $_POST['sobrantefaltante'];
-            //         $canti_billete_cienmil = $_POST['canti_billete_cienmil '];
-            //         $total_billete_cienmil = $_POST['total_billete_cienmil '];
-            //         $canti_billete_cincuentamil = $_POST['canti_billete_cincuentamil'];
-            //         $canti_billete_veintemil = $_POST['canti_billete_veintemil'];
-            //         $total_billete_veintemil = $_POST['total_billete_veintemil'];
-            //         $canti_billete_diezmil = $_POST['canti_billete_diezmil'];
-            //         $total_billete_diezmil = $_POST['total_billete_diezmil'];
-            //         $canti_billete_cincomil = $_POST['canti_billete_cincomil '];
-            //         $total_billete_cincomil = $_POST['total_billete_cincomil '];
-            //         $canti_billete_dosmil = $_POST['canti_billete_dosmil'];
-            //         $total_billete_dosmil = $_POST['total_billete_dosmil'];
-            //         $canti_billete_mil = $_POST['canti_billete_mil'];
-            //         $total_billete_mil = $_POST['total_billete_mil'];
-            //         $canti_moneda_mil = $_POST['canti_moneda_mil'];
-            //         $total_moneda_mil = $_POST['total_moneda_mil'];
-            //         $canti_moneda_quinientos = $_POST['canti_moneda_quinientos '];
-            //         $total_moneda_quinientos = $_POST['total_moneda_quinientos '];
-            //         $canti_moneda_docientos = $_POST['canti_moneda_docientos'];
-            //         $total_moneda_docientos = $_POST['total_moneda_docientos'];
-            //         $canti_moneda_cien = $_POST['canti_moneda_cien'];
-            //         $total_moneda_cien = $_POST['total_moneda_cien'];
-            //         $canti_moneda_cincuenta = $_POST['canti_moneda_cincuenta'];
-            //         $total_moneda_ciencuenta = $_POST['total_moneda_ciencuenta '];
-            //         $total_efectivo = $_POST['total_premios_pagados '];
-            //         $entrega_colocador = $_POST['entrega_colocador'];
-            //         $sobrantefaltante_caja = $_POST['sobrantefaltante_caja'];
-            //         $colocador_cajafuerte = $_POST['colocador_cajafuerte'];
-            //         $rollos_bnet = $_POST['rollos_bnet'];
-            //         $rollos_fisicos = $_POST['rollos_fisicos'];
-            //         $diferencia = $_POST['diferencia'];
-            //         $requisito1 = $_POST['requisito1'];
-            //         $observacion1 = $_POST['observacion1'];
-            //         $requisito2 = $_POST['requisito2'];
-            //         $observacion2 = $_POST['observacion2'];
-            //         $requisito3 = $_POST['requisito3'];
-            //         $observacion3 = $_POST['observacion3'];
-            //         $requisito4 = $_POST['requisito4'];
-            //         $observacion4 = $_POST['observacion4'];
-            //         $requisito5 = $_POST['requisito5'];
-            //         $observacion5 = $_POST['observacion5'];
-            //         $requisito6 = $_POST['requisito6'];
-            //         $observacion6 = $_POST['observacion6'];
-            //         $requisito7 = $_POST['requisito7'];
-            //         $observacion7 = $_POST['observacion7'];
-            //         $requisito8 = $_POST['requisito8'];
-            //         $observacion8 = $_POST['observacion8'];
-            //         $requisito9 = $_POST['requisito9'];
-            //         $observacion9 = $_POST['observacion9'];
-            //         $requisito10 = $_POST['requisito10'];
-            //         $observacion10 = $_POST['observacion10'];
-            //         $requisito11 = $_POST['requisito11'];
-            //         $observacion11 = $_POST['observacion11'];
-            //         $requisito12 = $_POST['requisito12'];
-            //         $observacion12 = $_POST['observacion12'];
-            //         $requisito13 = $_POST['requisito13'];
-            //         $observacion13 = $_POST['observacion13'];
-            //         $requisito14 = $_POST['requisito14'];
-            //         $observacion14 = $_POST['observacion14'];
-            //         $requisito15 = $_POST['requisito15'];
-            //         $observacion15 = $_POST['observacion15'];
-            //         $requisito16 = $_POST['requisito16'];
-            //         $observacion16 = $_POST['observacion16'];
-            //         $requisito17 = $_POST['requisito17'];
-            //         $observacion17 = $_POST['observacion17'];
-            //         $requisito18 = $_POST['requisito18'];
-            //         $observacion18 = $_POST['observacion18'];
-            //         $requisito19 = $_POST['requisito19'];
-            //         $observacion19 = $_POST['observacion19'];
-            //         $requisito20 = $_POST['requisito20'];
-            //         $observacion20 = $_POST['observacion20'];
-            //         $requisito21 = $_POST['requisito21'];
-            //         $observacion21 = $_POST['observacion21'];
-            //         $requisito22 = $_POST['requisito22'];
-            //         $observacion22 = $_POST['observacion22'];
-            //         $requisito23 = $_POST['requisito23'];
-            //         $observacion23 = $_POST['observacion23'];
-            //         $requisito24 = $_POST['requisito24'];
-            //         $observacion24 = $_POST['observacion24'];
-            //         $requisito25 = $_POST['requisito25'];
-            //         $observacion25 = $_POST['observacion25'];
-            //         $requisito26 = $_POST['requisito26'];
-            //         $observacion26 = $_POST['observacion26'];
-            //         $requisito27 = $_POST['requisito27'];
-            //         $observacion27 = $_POST['observacion27'];
-            //         $requisito28 = $_POST['requisito28'];
-            //         $observacion28 = $_POST['observacion28'];
-            //         $requisito29 = $_POST['requisito29'];
-            //         $observacion29 = $_POST['observacion29'];
-            //         $requisito30 = $_POST['requisito30'];
-            //         $observacion30 = $_POST['observacion30'];
-            //         $fechavisita  = $_POST['fechavisita'];
-            //         $horavisita =   $_POST['horavisita'];
-            //         $latitud = $_POST['latitud'];
-            //         $longitud = $_POST['longitud'];
-            //         $modificarDatos = $datos->Datos($ip, $nombres, $documento, $sucursal, $supervisor, $ventabruta, $ventabruta, $baseefectivo, $totalingreso, $chancesabonados, $chancespreimpresos, $premiospagados, $efectivocajafuerte, $totalegresos, $totalbilletes, $totalmonedas, $totalarqueo, $sobrantefaltante, $canti_billete_cienmil, $total_billete_cienmil, $canti_billete_cincuentamil, $total_billete_cincuentamil, $canti_billete_veintemil, $total_billete_veintemil, $canti_billete_diezmil, $total_billete_diezmil, $canti_billete_cincomil, $efectivocajafuerte, $total_billete_cincomil, $canti_billete_dosmil, $total_billete_dosmil, $canti_billete_mil, $total_billete_mil, $canti_moneda_mil, $supervisor, $total_moneda_mil, $canti_moneda_quinientos, $total_moneda_quinientos, $canti_moneda_docientos, $total_moneda_docientos, $canti_moneda_cien, $total_moneda_cien, $canti_moneda_cincuenta, $total_moneda_ciencuenta, $total_efectivo, $total_premios_pagados, $entrega_colocador, $sobrantefaltante_caja, $colocador_cajafuerte, $rollos_bnet, $rollos_fisicos, $diferencia, $requisito1, $observacion1, $requisito2, $observacion2, $requisito3, $observacion3, $requisito4, $observacion4, $requisito5, $observacion5, $requisito6, $observacion6, $requisito7, $observacion7, $requisito8, $observacion8, $requisito9, $observacion9, $requisito10, $observacion10, $requisito11, $observacion11, $requisito12, $observacion12, $requisito13, $observacion13, $requisito14, $observacion14, $requisito15, $observacion15, $requisito16, $observacion16, $requisito17, $observacion17, $requisito18, $observacion18, $requisito19, $observacion19, $requisito20, $observacion20, $requisito21, $observacion21, $requisito22, $observacion22, $requisito23, $observacion23, $requisito24, $observacion24, $requisito25, $observacion25, $requisito26, $observacion26, $requisito27, $observacion27, $requisito28,  $observacion28, $requisito29, $observacion29, $requisito30, $observacion30, $fechavisita, $horavisita, $latitud, $longitud,   $_SESSION['userLogin']);
-            //     }
-            // }
         ?>
 
             <div class="table-wrapper">
@@ -184,7 +67,7 @@
                 </div>
                 <?php if (empty($row)) { ?>
                     <div class="row">
-                        <a href="index.php">
+                        <a href="index1.php">
                             <input type='button' value='volver' class="btn btn-primary">
                         </a>
                     </div>
@@ -644,7 +527,7 @@
                                     <?php echo "<input class='form-control'  disabled value='" . $row["longitud"] . "' name='año_lanzamiento' type='' pattern='[a-zA-ZÀ-ÿ\u00f1\u00d1\0-9 ]{0,120}'>"; ?>
                                 </div>
                                 <div class="form-group col-md-12">
-                                    <a href='index.php'><input type='button' value='Volver' class="btn btn-primary"></a>
+                                    <a href='index1.php'><input type='button' value='Volver' class="btn btn-primary"></a>
                                 </div>
                             </form>
                     </div>

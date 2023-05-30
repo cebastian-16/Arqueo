@@ -144,7 +144,7 @@
         ?>
     </div>
     <div class="form-group col-md-12">
-        <a href='index.php'><input type='button' value='Volver' class="BOTON"></a>
+        <a href='index1.php'><input type='button' value='Volver' class="BOTON"></a>
     </div>
     <script type="text/javascript" src='js/jquery.min.js'></script>
     <script type="text/javascript" src='js/bootstrap.min.js'></script>

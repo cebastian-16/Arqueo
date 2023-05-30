@@ -7,12 +7,9 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script type="text/javascript" src="js/scripRegArt.js"></script>
     <link rel="icon" href="http://localhost/Arqueos/Vista/img/arqueo.ico" type="image/x-icon">
-
 </head>
 
 <body>
-
-    </div>
     <div class="container-fluid">
 
         <?php
@@ -36,21 +33,10 @@
             $resultadoDatos = $datos->mirarDatos();
             $row = mysqli_fetch_array($resultadoDatos);
 
+          
 
-            // if (!empty($_POST['boton'])) {
-            //     $accion = $_POST['boton'];
-            //     if ($accion == "Modificar") {
-            //         $ip = $_POST['ip'];
-            //         $nombres = $_POST['nombres'];
-            //         $documento = $_POST['documento '];
-            //         $sucursal = $_POST['sucursal '];
-            //         $supervisor = $_POST['supervisor'];
-            //         $ventabruta = $_POST['ventabruta'];
-            //         $modificarDatos = $datos->mirarDatos($ip, $nombres, $documento, $sucursal, $supervisor, $ventabruta, $_SESSION['userLogin']);
-            //     }
-            // }
+
         ?>
-
             <div class="table-wrapper">
                 <?php if (empty($consultaM)) { ?>
                     <form action="buscador.php" method="post" name="ModArticulo" class="search-form">
@@ -65,7 +51,6 @@
                     </form>
                 <?php } ?>
                 <div class="users-table">
-
                     <table class="table-bordered">
                         <thead>
                             <tr>
@@ -135,6 +120,7 @@
         <?php
         }
         ?>
+        
 </body>
 
 </html>
