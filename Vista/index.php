@@ -20,7 +20,7 @@
             exit;
         } {
 
-            if ($_SESSION['cargoLogin'] != 'Auditoria' && $_SESSION['rolLogin'] != 'Administrador') {
+            if ($_SESSION['cargoLogin'] != 'Auditoria' && $_SESSION['cargoLogin'] != 'Auxiliar Auditoria' && $_SESSION['cargoLogin'] != 'Auxiliar Comercial' && $_SESSION['rolLogin'] != 'SuperAdministrador' && $_SESSION['rolLogin'] != 'Administrador' && $_SESSION['procesoLogin'] != 'TIC' && $_SESSION['procesoLogin'] != 'Comercial') {
                 session_destroy();
                 header('Location: ../../errores/403/index.html');
                 exit;

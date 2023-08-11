@@ -6,7 +6,7 @@ if (!isset($_SESSION['userLogin'])) {
     exit;
 } {
 
-    if ($_SESSION['cargoLogin'] != 'Auditoria' && $_SESSION['rolLogin'] != 'Administrador') {
+    if ($_SESSION['cargoLogin'] != 'Auditoria' && $_SESSION['cargoLogin'] != 'Auxiliar Auditoria' && $_SESSION['cargoLogin'] != 'Auxiliar Comercial' && $_SESSION['rolLogin'] != 'SuperAdministrador' && $_SESSION['rolLogin'] != 'Administrador' && $_SESSION['procesoLogin'] != 'TIC' && $_SESSION['procesoLogin'] != 'Comercial') {
         session_destroy();
         header('Location: ../../errores/403/index.html');
         exit;
@@ -19,7 +19,7 @@ if (!isset($_SESSION['userLogin'])) {
     $conexion = $conectar->conexion();
 
 
-    if ($_SESSION['sedeStock'] == "Multired") {
+    if($_SESSION['sedeStock'] == "Multired") {
 
         // Configuración de la paginación
         $resultadosPorPagina = 10; // Número de resultados por página
@@ -51,11 +51,13 @@ if (!isset($_SESSION['userLogin'])) {
         $resultado = $totalResultados->fetch_assoc();
         $totalPaginas = ceil($resultado['total'] / $resultadosPorPagina);
 
+        
+
         // Calcular el índice inicial y final de los resultados a mostrar en la página actual
         $indiceInicio = ($paginaActual - 1) * $resultadosPorPagina;
         $consultaDatos = "SELECT s.supervisor, IF(s.supervisor = b.login, b.nombre, '') AS nombre_supervisor, s.*
         FROM appseguimiento.registro_arqueo_servired s
-        INNER JOIN bdpersonas.tbusuario b ON s.supervisor = b.login
+        INNER JOIN bdpersonas.tbusuario b ON s.supervisor = b.login 
         LIMIT $indiceInicio, $resultadosPorPagina";
         $sentencia = $conexion->prepare($consultaDatos);
         $sentencia->execute();
@@ -95,8 +97,7 @@ if (!isset($_SESSION['userLogin'])) {
                     <div class="users-table">
                         <table class="table-bordered">
                             <thead>
-                                <tr>
-                                    <th>Supervisor</th>
+                            <th>Supervisor</th>
                                     <th>Nombre Completo</th>
                                     <th>IP</th>
                                     <th>Nombres</th>
@@ -107,6 +108,8 @@ if (!isset($_SESSION['userLogin'])) {
                                     <th>Total Ingreso</th>
                                     <th>Fecha Visita</th>
                                     <th>Hora Visita</th>
+                                    <th>Firma Auditor</th>
+                                    <th>Firma Colocadora</th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -145,6 +148,12 @@ if (!isset($_SESSION['userLogin'])) {
                                         </th>
                                         <th>
                                             <?= $row['horavisita'] ?>
+                                        </th>
+                                        <th>
+                                            <img src="data:image/PNG;base64,<?php  echo base64_encode($row['firma_auditoria']); ?>" style= "width: 70%; height: 10%;">
+                                        </th>
+                                        <th>
+                                            <img src="data:image/PNG;base64,<?php  echo base64_encode($row['firma_colocadora']); ?>" style= "width: 70%; height: 10%;">
                                         </th>
                                         <th>
                                             <!-- manda la variable al buscar php -->

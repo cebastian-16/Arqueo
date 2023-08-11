@@ -5,7 +5,7 @@ class conectar
 	public $servername = 'localhost';
 	public $database = "appseguimiento";
 	public $username = "root";
-	public $password = "123456";
+	public $password = "";
 	private $bd = "";
 
 	public function __construct($bd)

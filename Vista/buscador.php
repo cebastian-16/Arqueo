@@ -21,7 +21,7 @@
             header('Location: login.php');
             exit;
         } else {
-            if ($_SESSION['cargoLogin'] != 'Auditoria' && $_SESSION['rolLogin'] != 'SuperAdministrador') {
+            if ($_SESSION['cargoLogin'] != 'Auditoria' && $_SESSION['cargoLogin'] != 'Auxiliar Auditoria' && $_SESSION['cargoLogin'] != 'Auxiliar Comercial' && $_SESSION['rolLogin'] != 'SuperAdministrador' && $_SESSION['rolLogin'] != 'Administrador' && $_SESSION['procesoLogin'] != 'TIC' && $_SESSION['procesoLogin'] != 'Comercial') {
                 session_destroy();
                 header('Location: ../../errores/403/index.html');
                 exit;
@@ -55,7 +55,9 @@
                     }
                 }
             }
+            echo  $fechavisitaM ;
         ?>
+        
             <!-- recoge el dato que mandan desde el php index -->
             <?php if (!empty($consultaM)) { ?>
                 <div class="table-wrapper">
@@ -86,6 +88,8 @@
                                         <th>Total Ingreso</th>
                                         <th>Fecha Visita</th>
                                         <th>Hora Visita</th>
+                                        <th>Firma Auditor</th>
+                                        <th>Firma Colocadora</th>
                                         <th></th>
                                 </tr>
                             </thead>
@@ -127,6 +131,12 @@
                                             <?= $consultaM['horavisita'] ?>
                                         </th>
                                         <th>
+                                            <img src="data:image/PNG;base64,<?php echo base64_encode($row['firma_auditoria']); ?>" style="width: 70%; height: 10%;">
+                                        </th>
+                                        <th>
+                                            <img src="data:image/PNG;base64,<?php echo base64_encode($row['firma_colocadora']); ?>" style="width: 70%; height: 10%;">
+                                        </th>
+                                        <th>
                                             <?php echo "<a href='verArqueo.php?documento=" . $consultaM['documento'] . "' ><svg style='color:blue'  xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-search' viewBox='0 0 16 16'>
                                             <path d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/>
                                             </svg></a>"; ?>
@@ -134,7 +144,6 @@
                                 </tr>
                             <?php endwhile; ?>
                             </tbody>
-
                         </table>
                     </div>
                 </div>
