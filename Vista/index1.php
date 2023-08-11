@@ -19,7 +19,7 @@ if (!isset($_SESSION['userLogin'])) {
     $conexion = $conectar->conexion();
 
 
-    if($_SESSION['sedeStock'] == "Multired") {
+    if ($_SESSION['sedeStock'] == "Multired") {
 
         // Configuración de la paginación
         $resultadosPorPagina = 10; // Número de resultados por página
@@ -51,7 +51,7 @@ if (!isset($_SESSION['userLogin'])) {
         $resultado = $totalResultados->fetch_assoc();
         $totalPaginas = ceil($resultado['total'] / $resultadosPorPagina);
 
-        
+
 
         // Calcular el índice inicial y final de los resultados a mostrar en la página actual
         $indiceInicio = ($paginaActual - 1) * $resultadosPorPagina;
@@ -81,10 +81,10 @@ if (!isset($_SESSION['userLogin'])) {
 
         <div class="table-wrapper">
 
-            <form action="buscador.php" method="post" name="ModArticulo" class="search-form">
+            <form action="buscador.php" method="POST" name="ModArticulo" class="search-form">
                 <div class="form-group">
                     <label for="fechavisita" class="sr-only"></label>
-                    <input type="date" name="fechavisitaM" class="form-control ">
+                    <input type="date" name="fechavisitaM" id="fechavisitaM" class="form-control ">
                 </div>
                 <br>
                 <div class="form-group">
@@ -94,78 +94,75 @@ if (!isset($_SESSION['userLogin'])) {
 
             <div class="users-table">
                 <table class="table-bordered">
-                    <div class="users-table">
-                        <table class="table-bordered">
-                            <thead>
-                            <th>Supervisor</th>
-                                    <th>Nombre Completo</th>
-                                    <th>IP</th>
-                                    <th>Nombres</th>
-                                    <th>Documento</th>
-                                    <th>Sucursal</th>
-                                    <th>Venta Bruta</th>
-                                    <th>Base Efectivo</th>
-                                    <th>Total Ingreso</th>
-                                    <th>Fecha Visita</th>
-                                    <th>Hora Visita</th>
-                                    <th>Firma Auditor</th>
-                                    <th>Firma Colocadora</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <?php foreach ($resultadoDatos as $row) : ?>
-                                        <th>
-                                            <?= $row['supervisor'] ?>
-                                        </th>
-                                        <th>
-                                            <?= $row['nombre_supervisor'] ?>
-                                        </th>
-                                        <th>
-                                            <?= $row['ip'] ?>
-                                        </th>
-                                        <th>
-                                            <?= $row['nombres'] ?>
-                                        </th>
-                                        <th>
-                                            <?= $row['documento'] ?>
-                                        </th>
-                                        <th>
-                                            <?= $row['sucursal'] ?>
-                                        </th>
-                                        <th>
-                                            <?= $row['ventabruta'] ?>
-                                        </th>
-                                        <th>
-                                            <?= $row['baseefectivo'] ?>
-                                        </th>
-                                        <th>
-                                            <?= $row['totalingreso'] ?>
-                                        </th>
-                                        <th>
-                                            <?= $row['fechavisita'] ?>
-                                        </th>
-                                        <th>
-                                            <?= $row['horavisita'] ?>
-                                        </th>
-                                        <th>
-                                            <img src="data:image/PNG;base64,<?php  echo base64_encode($row['firma_auditoria']); ?>" style= "width: 70%; height: 10%;">
-                                        </th>
-                                        <th>
-                                            <img src="data:image/PNG;base64,<?php  echo base64_encode($row['firma_colocadora']); ?>" style= "width: 70%; height: 10%;">
-                                        </th>
-                                        <th>
-                                            <!-- manda la variable al buscar php -->
-                                            <?php echo "<a href='verArqueo.php?documento=" . $row['documento'] . "' ><svg style='color:blue'  xmlns='http://www.w3.org/2000/svg' width='30' height='20' fill='currentColor' class='bi bi-search' viewBox='0 0 16 16'>
+                    <thead>
+                        <th>Supervisor</th>
+                        <th>Nombre Completo</th>
+                        <th>IP</th>
+                        <th>Nombres</th>
+                        <th>Documento</th>
+                        <th>Sucursal</th>
+                        <th>Venta Bruta</th>
+                        <th>Base Efectivo</th>
+                        <th>Total Ingreso</th>
+                        <th>Fecha Visita</th>
+                        <th>Hora Visita</th>
+                        <th>Firma Auditor</th>
+                        <th>Firma Colocadora</th>
+                        <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <?php foreach ($resultadoDatos as $row) : ?>
+                                <th>
+                                    <?= $row['supervisor'] ?>
+                                </th>
+                                <th>
+                                    <?= $row['nombre_supervisor'] ?>
+                                </th>
+                                <th>
+                                    <?= $row['ip'] ?>
+                                </th>
+                                <th>
+                                    <?= $row['nombres'] ?>
+                                </th>
+                                <th>
+                                    <?= $row['documento'] ?>
+                                </th>
+                                <th>
+                                    <?= $row['sucursal'] ?>
+                                </th>
+                                <th>
+                                    <?= $row['ventabruta'] ?>
+                                </th>
+                                <th>
+                                    <?= $row['baseefectivo'] ?>
+                                </th>
+                                <th>
+                                    <?= $row['totalingreso'] ?>
+                                </th>
+                                <th>
+                                    <?= $row['fechavisita'] ?>
+                                </th>
+                                <th>
+                                    <?= $row['horavisita'] ?>
+                                </th>
+                                <th>
+                                    <img src="data:image/PNG;base64,<?php echo base64_encode($row['firma_auditoria']); ?>" style="width: 70%; height: 10%;">
+                                </th>
+                                <th>
+                                    <img src="data:image/PNG;base64,<?php echo base64_encode($row['firma_colocadora']); ?>" style="width: 70%; height: 10%;">
+                                </th>
+                                <th>
+                                    <!-- manda la variable al buscar php -->
+                                    <?php echo "<a href='verArqueo.php?documento=" . $row['documento'] . "' ><svg style='color:blue'  xmlns='http://www.w3.org/2000/svg' width='30' height='20' fill='currentColor' class='bi bi-search' viewBox='0 0 16 16'>
 				                        <path d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/>
 				                        </svg></a>"; ?>
-                                        </th>
-                                </tr>
-                            <?php endforeach; ?>
-                            </tbody>
-                        </table>
-                    </div>
+                                </th>
+                        </tr>
+                    <?php endforeach; ?>
+                    </tbody>
+                </table>
             </div>
             </th>
         </div>

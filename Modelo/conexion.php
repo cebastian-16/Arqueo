@@ -17,7 +17,7 @@ class conectar
 	function conexion()
 	{
 		if ($this->bd == "Multired") {
-			$this->database="appseguimientos";
+			$this->database="appseguimiento";
 		}else if($this->bd == "Servired"){
 			$this->database="appseguimiento";
 		}

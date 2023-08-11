@@ -16,7 +16,7 @@ class datos
 		if ($_SESSION['sedeStock'] == "Multired") {
 
 			$mirarDatos = "SELECT s.supervisor, IF(s.supervisor = b.login, b.nombre, '') AS nombre_supervisor, s.*
-			FROM appseguimientos.registro_arqueo_servired s
+			FROM appseguimiento.registro_arqueo_servired s
 			INNER JOIN bdpersonas.tbusuario b ON s.supervisor = b.login LIMIT 6";
 			$resultadoDatos = mysqli_query($this->conn, $mirarDatos);
 			return $resultadoDatos;
@@ -46,7 +46,7 @@ class datos
 		s.observacion7, s.requisito8, s.observacion8, s.requisito9, s.observacion9, s.requisito10, s.observacion10, s.requisito11, s.observacion11, s.requisito12, s.observacion12, s.requisito13, s.observacion13, s.requisito14, s.observacion14, s.requisito15, s.observacion15, s.requisito16, s.observacion16, s.requisito17, s.observacion17, s.requisito18, s.observacion18, 
 		s.requisito19, s.observacion19, s.requisito20, s.observacion20, s.requisito21, s.observacion21, s.requisito22, s.observacion22, s.requisito23, s.observacion23, s.requisito24, s.observacion24, s.requisito25, s.observacion25, s.requisito26, 
 		s.observacion26, s.requisito27, s.observacion27, s.requisito28, s.observacion28, s.requisito29, s.requisito30, s.fechavisita, s.horavisita, s.firma_auditoria, s.firma_colocadora, s.latitud, s.longitud
-		FROM appseguimientos.registro_arqueo_servired s
+		FROM appseguimiento.registro_arqueo_servired s
 		INNER JOIN bdpersonas.tbusuario b ON s.supervisor = b.login WHERE s.documento='$documento'";
 			$resultadoDato = mysqli_query($this->conn, $Datos);
 			return $resultadoDato;
@@ -73,7 +73,7 @@ class datos
 		if ($_SESSION['sedeStock'] == "Multired") {
 
 			$consultarArqueo = "SELECT s.supervisor, IF(s.supervisor = b.login, b.nombre, '') AS nombre_supervisor, s.ip, s.nombres, s.documento, s.sucursal, s.ventabruta, s.baseefectivo, s.totalingreso, s.fechavisita,  s.horavisita, s.firma_auditoria, s.firma_colocadora
-			FROM appseguimientos.registro_arqueo_servired s
+			FROM appseguimiento.registro_arqueo_servired s
 			INNER JOIN bdpersonas.tbusuario b ON s.supervisor = b.login WHERE s.fechavisita = '" . $fechavisitaM . "'";
 			$resultadoArqueo = mysqli_query($this->conn, $consultarArqueo);
 			return $resultadoArqueo;
@@ -84,7 +84,7 @@ class datos
 			$consultarArqueo = "SELECT s.supervisor, IF(s.supervisor = b.login, b.nombre, '') AS nombre_supervisor, s.ip, s.nombres, s.documento, s.sucursal, s.ventabruta, s.baseefectivo, s.totalingreso, s.fechavisita, s.horavisita, s.firma_auditoria, s.firma_colocadora
 			FROM appseguimiento.registro_arqueo_servired s 
 			INNER JOIN bdpersonas.tbusuario b ON s.supervisor = b.login 
-			WHERE s.fechavisita = '" . $fechavisitaM . "'";
+			WHERE s.fechavisita = DATE_FORMAT('" . $fechavisitaM . "', '%Y-%m-%d')";
 			$resultadoArqueo = mysqli_query($this->conn, $consultarArqueo);
 			return $resultadoArqueo;
 		}

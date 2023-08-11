@@ -42,7 +42,7 @@
                     <form action="buscador.php" method="post" name="ModArticulo" class="search-form">
                         <div class="form-group">
                             <label for="fechavisita" class="sr-only"></label>
-                            <input type="date" name="fechavisitaM" class="form-control ">
+                            <input  name="fechavisitaM" class="form-control ">
                         </div>
                         <br>
                         <div class="form-group">

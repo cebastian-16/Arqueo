@@ -55,80 +55,65 @@
                     }
                 }
             }
-            echo  $fechavisitaM ;
         ?>
-        
+
             <!-- recoge el dato que mandan desde el php index -->
             <?php if (!empty($consultaM)) { ?>
                 <div class="table-wrapper">
                     <div class="users-table">
                         <table class="table-bordered">
                             <thead>
-                                <tr>
-                                    <div class="table-wrapper">
-                                        <?php if (empty($consultaM)) { ?>
-                                            <div class="form-group">
-                                                <label for="placa" class="sr-only"></label>
-                                                <input class='form-control' name='fechavisitaM' type='date'>
-                                            </div>
-                                            <br>
-                                            <div class="form-group">
-                                                <input type="submit" name="boton" value="Consultar" class="btn btn-primary">
-                                            </div>
-                                            </form>
-                                        <?php } ?>
-                                        <th>Supervisor</th>
-                                        <th>Nombre Completo</th>
-                                        <th>IP</th>
-                                        <th>Nombres</th>
-                                        <th>Documento</th>
-                                        <th>Sucursal</th>
-                                        <th>Venta Bruta</th>
-                                        <th>Base Efectivo</th>
-                                        <th>Total Ingreso</th>
-                                        <th>Fecha Visita</th>
-                                        <th>Hora Visita</th>
-                                        <th>Firma Auditor</th>
-                                        <th>Firma Colocadora</th>
-                                        <th></th>
+                                <th>Supervisor</th>
+                                <th>Nombre Completo</th>
+                                <th>IP</th>
+                                <th>Nombres</th>
+                                <th>Documento</th>
+                                <th>Sucursal</th>
+                                <th>Venta Bruta</th>
+                                <th>Base Efectivo</th>
+                                <th>Total Ingreso</th>
+                                <th>Fecha Visita</th>
+                                <th>Hora Visita</th>
+                                <th>Firma Auditor</th>
+                                <th>Firma Colocadora</th>
+                                <th></th>
                                 </tr>
                             </thead>
-
                             <tbody>
                                 <tr>
-                                    <?php while ($consultaM = mysqli_fetch_array($resultadoArqueo)) : ?>
+                                    <?php foreach ($resultadoArqueo as $row) : ?>
                                         <th>
-                                            <?= $consultaM['supervisor'] ?>
+                                            <?= $row['supervisor'] ?>
                                         </th>
                                         <th>
-                                            <?= $consultaM['nombre_supervisor'] ?>
+                                            <?= $row['nombre_supervisor'] ?>
                                         </th>
                                         <th>
-                                            <?= $consultaM['ip'] ?>
+                                            <?= $row['ip'] ?>
                                         </th>
                                         <th>
-                                            <?= $consultaM['nombres'] ?>
+                                            <?= $row['nombres'] ?>
                                         </th>
                                         <th>
-                                            <?= $consultaM['documento'] ?>
+                                            <?= $row['documento'] ?>
                                         </th>
                                         <th>
-                                            <?= $consultaM['sucursal'] ?>
+                                            <?= $row['sucursal'] ?>
                                         </th>
                                         <th>
-                                            <?= $consultaM['ventabruta'] ?>
+                                            <?= $row['ventabruta'] ?>
                                         </th>
                                         <th>
-                                            <?= $consultaM['baseefectivo'] ?>
+                                            <?= $row['baseefectivo'] ?>
                                         </th>
                                         <th>
-                                            <?= $consultaM['totalingreso'] ?>
+                                            <?= $row['totalingreso'] ?>
                                         </th>
                                         <th>
-                                            <?= $consultaM['fechavisita'] ?>
+                                            <?= $row['fechavisita'] ?>
                                         </th>
                                         <th>
-                                            <?= $consultaM['horavisita'] ?>
+                                            <?= $row['horavisita'] ?>
                                         </th>
                                         <th>
                                             <img src="data:image/PNG;base64,<?php echo base64_encode($row['firma_auditoria']); ?>" style="width: 70%; height: 10%;">
@@ -137,12 +122,13 @@
                                             <img src="data:image/PNG;base64,<?php echo base64_encode($row['firma_colocadora']); ?>" style="width: 70%; height: 10%;">
                                         </th>
                                         <th>
-                                            <?php echo "<a href='verArqueo.php?documento=" . $consultaM['documento'] . "' ><svg style='color:blue'  xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-search' viewBox='0 0 16 16'>
-                                            <path d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/>
-                                            </svg></a>"; ?>
+                                            <!-- manda la variable al buscar php -->
+                                            <?php echo "<a href='verArqueo.php?documento=" . $row['documento'] . "' ><svg style='color:blue'  xmlns='http://www.w3.org/2000/svg' width='30' height='20' fill='currentColor' class='bi bi-search' viewBox='0 0 16 16'>
+				                        <path d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'/>
+				                        </svg></a>"; ?>
                                         </th>
                                 </tr>
-                            <?php endwhile; ?>
+                            <?php endforeach; ?>
                             </tbody>
                         </table>
                     </div>
