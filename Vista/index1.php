@@ -106,8 +106,11 @@ if (!isset($_SESSION['userLogin'])) {
                         <th>Total Ingreso</th>
                         <th>Fecha Visita</th>
                         <th>Hora Visita</th>
-                        <th>Firma Auditor</th>
-                        <th>Firma Colocadora</th>
+                        <?php
+                        if (!empty($row['firma_auditoria']) && $row['firma_colocadora']) { ?>
+                            <th>Firma Auditor</th>
+                            <th>Firma Colocadora</th>
+                        <?php }; ?>
                         <th></th>
                         </tr>
                     </thead>
@@ -147,12 +150,16 @@ if (!isset($_SESSION['userLogin'])) {
                                 <th>
                                     <?= $row['horavisita'] ?>
                                 </th>
-                                <th>
-                                    <img src="data:image/PNG;base64,<?php echo base64_encode($row['firma_auditoria']); ?>" style="width: 70%; height: 10%;">
-                                </th>
-                                <th>
-                                    <img src="data:image/PNG;base64,<?php echo base64_encode($row['firma_colocadora']); ?>" style="width: 70%; height: 10%;">
-                                </th>
+                                <?php
+                                if (!empty($row['firma_auditoria']) && $row['firma_colocadora']) { ?>
+                                    <th>
+                                        <img src="data:image/PNG;base64,<?php echo base64_encode($row['firma_auditoria']); ?>" style="width: 70%; height: 10%;">
+                                    </th>
+                                    <th>
+                                        <img src="data:image/PNG;base64,<?php echo base64_encode($row['firma_colocadora']); ?>" style="width: 70%; height: 10%;">
+                                    </th>
+                                <?php }; ?>
+
                                 <th>
                                     <!-- manda la variable al buscar php -->
                                     <?php echo "<a href='verArqueo.php?documento=" . $row['documento'] . "' ><svg style='color:blue'  xmlns='http://www.w3.org/2000/svg' width='30' height='20' fill='currentColor' class='bi bi-search' viewBox='0 0 16 16'>
